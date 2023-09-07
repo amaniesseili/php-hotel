@@ -58,15 +58,47 @@
 foreach ($hotels as $hotel){
   echo "Nome: "  . $hotel[ "name"] . "<br>"; 
   echo "Descrizione:" . $hotel["description"] . "<br>";
-  echo "Parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";
+  echo "Parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";   // se $hotel[parking]è true stampa sì
   echo "Voto: " . $hotel['vote'] . "<br>";
   echo "Distanza dal centro: " . $hotel['distance_to_center'] . "<br>";
 
 }
 
-
 ?>
-<!-- ----------------------------------------------- -->
+<!-- ------------------------------------------------------------------------ -->
+<!-- ------  step 2 : vedere i dati degli hotel in una tabella   ------------ -->
+<div class="container">
+        <h1>Elenco Hotel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Parcheggio</th>
+                    <th>Voto</th>
+                    <th>Distanza dal centro </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php
+
+                foreach ($hotels as $hotel) {
+                    echo "<tr>";
+                    echo "<td>" . $hotel['name'] . "</td>";
+                    echo "<td>" . $hotel['description'] . "</td>";
+                    echo "<td>" . ($hotel['parking'] ? 'Sì' : 'No') . "</td>";
+                    echo "<td>" . $hotel['vote'] . "</td>";
+                    echo "<td>" . $hotel['distance_to_center'] . "</td>";
+                    echo "</tr>";
+                }
+                ?> 
+
+            </tbody>
+        </table>
+    </div>
+
+
 
 
   
