@@ -55,14 +55,14 @@
 <!-- ------  step 1 : stampare i dati degli hotel   ------------ -->
 
 <?php
-foreach ($hotels as $hotel){
+/*foreach ($hotels as $hotel){
   echo "Nome: "  . $hotel[ "name"] . "<br>"; 
   echo "Descrizione:" . $hotel["description"] . "<br>";
   echo "Parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";   // se $hotel[parking]è true stampa sì
   echo "Voto: " . $hotel['vote'] . "<br>";
   echo "Distanza dal centro: " . $hotel['distance_to_center'] . "<br>";
 
-}
+}*/
 
 ?>
 <!-- ------------------------------------------------------------------------ -->
@@ -96,7 +96,20 @@ foreach ($hotels as $hotel){
 
             </tbody>
         </table>
+            <!-- ------------------------------------------------------------------------ -->
+            <!-- ------  step 3 : Bonus - filtro per parking  ------------ -->
+            <form method="GET" action="">
+                <label for="parking">Filtra per Parcheggio: </label>
+                <input type="checkbox" name="parking">
+
+                <button type="button" class="btn btn-outline-success">Applica Filtro</button>
+
+
+
+    </form>
     </div>
+
+
 
 
 
