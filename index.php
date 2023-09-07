@@ -68,8 +68,8 @@
 <!-- ------------------------------------------------------------------------ -->
 <!-- ------  step 2 : vedere i dati degli hotel in una tabella   ------------ -->
 <div class="container">
-        <h1>Elenco Hotel</h1>
-        <table class="table">
+        <h1 class="mt-5">Elenco Hotel</h1>
+        <table class="table mt-5 mb-5">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -92,6 +92,7 @@
                     echo "<td>" . $hotel['distance_to_center'] . "</td>";
                     echo "</tr>";
                 }
+
                 ?> 
 
             </tbody>
@@ -102,7 +103,7 @@
                 <label for="parking">Filtra per Parcheggio: </label>
                 <input type="checkbox" name="parking">
 
-                <button type="button" class="btn btn-outline-success">Applica Filtro</button>
+                <button type="button" class="btn btn-outline-success ms-5">Applica Filtro</button>
 
 
 
